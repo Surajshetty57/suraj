@@ -1,133 +1,271 @@
-lsblk
-init 0
-lsblk
-cat /proc/partitions
-c
-alias c=clear
-c
-pvs
-pvcreate /dev/sdb /dev/sdc
-pvs
-vgcreate /dev/myvg /dev/sdb /dev/sdc
-vgs
-man lvcreate
-c
-lvcreate -L 250 -n mylvol1 /dev/myvg
-lvcreate -l 1G -n mylvol2 /dev/myvg
-lvcreate -l +1GB -n mylvol2 /dev/myvg
-lvcreate -l 1GB -n mylvol2 /dev/myvg
-lvcreate -l 1gb -n mylvol2 /dev/myvg
-man lvcreate
-c
-lvcreate -l 250 -n mylvol2 /dev/myvg
-lvs
-df -h
-man df
-c
-man mkfs
-c
-mkfs.ext4 /dev/myvg/lvol1
-lvs
-mkfs.ext4 /dev/myvg/mylvol1
-mkfs.ext4 /dev/myvg/mylvol2
-mkdir class1 class2
-rmdir class1 class2
-pwd
-cd /
-mkdir class1 class2
-mount /dev/myvg/mylvol1 /class1
-mount /dev/myvg/mylvol2 /class2
-df -h
-init 6
-mount 
-c
-alias c=clear
-c
-df -h
-vi /etc/fstab 
-c
-vi .bashrc
-c
-reboot
-c
-d
-c
-mount
-df -h
-mount /dev/myvg/mulvol2 /class2
-mount /dev/myvg/mylvol2 /class2
-df -h
-mount
-df -h
-c
-df -h
-mount
-c
-d
-more .basharc
-more .bashrc
-whoami
-pwd
-ls -a
-useradd u1
-passwd -d u1
-su - u1
-vi /etc/bashrc
-useradd u2
-passwd -d u2
-su - u2
-su - u1
-pwd
-cd /
-vi /etc/fstab 
-c
-reboot
-df -h
-vi /etc/fstab 
-init 6
-df -h
-mount
-c
-mount /dev/myvg/mylvol2 /class2
-df -h
-cd /class2
-touch abc
-touch 1 2 3
-ls
-init 6
-cd /
-pwd
-ls
-cd class2
-ls
-df -h
-mount /dev/myvg/mylvol2 /class2
-df -h
-ls -l
-cd class1
-cd class 1
-cd ..
-cd /class1
-ls
-mount 
-c
-cd /class2
-ls -a
-c
-df -h
-cdd ..
-cd ..
-vi /etc/fstab 
-c
-init 6
-df -h
-mount
-c
-vgs
-lvs
-mke2
-
-c
-xc
-history
-init 6
+    1  lsblk
+    2  init 0
+    3  lsblk
+    4  cat /proc/partitions
+    5  c
+    6  alias c=clear
+    7  c
+    8  pvs
+    9  pvcreate /dev/sdb /dev/sdc
+   10  pvs
+   11  vgcreate /dev/myvg /dev/sdb /dev/sdc
+   12  vgs
+   13  man lvcreate
+   14  c
+   15  lvcreate -L 250 -n mylvol1 /dev/myvg
+   16  lvcreate -l 1G -n mylvol2 /dev/myvg
+   17  lvcreate -l +1GB -n mylvol2 /dev/myvg
+   18  lvcreate -l 1GB -n mylvol2 /dev/myvg
+   19  lvcreate -l 1gb -n mylvol2 /dev/myvg
+   20  man lvcreate
+   21  c
+   22  lvcreate -l 250 -n mylvol2 /dev/myvg
+   23  lvs
+   24  df -h
+   25  man df
+   26  c
+   27  man mkfs
+   28  c
+   29  mkfs.ext4 /dev/myvg/lvol1
+   30  lvs
+   31  mkfs.ext4 /dev/myvg/mylvol1
+   32  mkfs.ext4 /dev/myvg/mylvol2
+   33  mkdir class1 class2
+   34  rmdir class1 class2
+   35  pwd
+   36  cd /
+   37  mkdir class1 class2
+   38  mount /dev/myvg/mylvol1 /class1
+   39  mount /dev/myvg/mylvol2 /class2
+   40  df -h
+   41  init 6
+   42  mount 
+   43  c
+   44  alias c=clear
+   45  c
+   46  df -h
+   47  vi /etc/fstab 
+   48  c
+   49  vi .bashrc
+   50  c
+   51  reboot
+   52  c
+   53  d
+   54  c
+   55  mount
+   56  df -h
+   57  mount /dev/myvg/mulvol2 /class2
+   58  mount /dev/myvg/mylvol2 /class2
+   59  df -h
+   60  mount
+   61  df -h
+   62  c
+   63  df -h
+   64  mount
+   65  c
+   66  d
+   67  more .basharc
+   68  more .bashrc
+   69  whoami
+   70  pwd
+   71  ls -a
+   72  useradd u1
+   73  passwd -d u1
+   74  su - u1
+   75  vi /etc/bashrc
+   76  useradd u2
+   77  passwd -d u2
+   78  su - u2
+   79  su - u1
+   80  pwd
+   81  cd /
+   82  vi /etc/fstab 
+   83  c
+   84  reboot
+   85  df -h
+   86  vi /etc/fstab 
+   87  init 6
+   88  df -h
+   89  mount
+   90  c
+   91  mount /dev/myvg/mylvol2 /class2
+   92  df -h
+   93  cd /class2
+   94  touch abc
+   95  touch 1 2 3
+   96  ls
+   97  init 6
+   98  cd /
+   99  pwd
+  100  ls
+  101  cd class2
+  102  ls
+  103  df -h
+  104  mount /dev/myvg/mylvol2 /class2
+  105  df -h
+  106  ls -l
+  107  cd class1
+  108  cd class 1
+  109  cd ..
+  110  cd /class1
+  111  ls
+  112  mount 
+  113  c
+  114  cd /class2
+  115  ls -a
+  116  c
+  117  df -h
+  118  cdd ..
+  119  cd ..
+  120  vi /etc/fstab 
+  121  c
+  122  init 6
+  123  df -h
+  124  mount
+  125  c
+  126  vgs
+  127  lvs
+  128  mke2
+  129  c
+  130  xc
+  131  history
+  132  init 6
+  133  history
+  134  vgs
+  135  c
+  136  vgs
+  137  blk id
+  138  blkid
+  139  lsblk
+  140  pvs
+  141  c
+  142  pvcreate /dev/sdd
+  143  pvs
+  144  vgextend /dev/myvg /dev/sdd
+  145  vgs
+  146  pvs
+  147  vgs
+  148  df -h
+  149  c
+  150  umount /class1
+  151  mount
+  152  c
+  153  lvextend -L +500m /dev/myvg/mylvol1
+  154  lvs
+  155  df- h
+  156  df -h
+  157  mount /dev/myvg/mylvol1 /class1
+  158  df -h
+  159  man resize2fs
+  160  c
+  161  resize2fs /dev/myvg/mylvol1 
+  162  df -h
+  163  lsblk
+  164  c
+  165  umount /class2
+  166  umount /class1
+  167  vi /etc/fstab 
+  168  c
+  169  lvremove /dev/myvg/mylvol1
+  170  lvremove /dev/myvg/mylvol2
+  171  vgremove /dev/myvg
+  172  pvremove /dev/sdd /dev/sdc
+  173  pvremove /dev/sdb
+  174  lsblk
+  175  pvs
+  176  vgs
+  177  lvs
+  178  c
+  179  history
+  180  c
+  181  lsblk
+  182  fdisk /dev/sdb
+  183  fdisk -l /dev/sdb
+  184  cat /proc/swaps
+  185  vmstat
+  186  man vmstat
+  187  c
+  188  cat /proc/swaps
+  189  swapon /dev/sdb1
+  190  fdisk /dev/sdb1
+  191  mkswap /dev/sdb1
+  192  cat /proc/partitions
+  193  swapon /dev/sdb1
+  194  cat /proc/swaps
+  195  vi /etc/fstab 
+  196  fdisk /dev/sdb
+  197  c
+  198  fdisk /dev/sdb
+  199  c
+  200  lsblk
+  201  cat /proc/partitions
+  202  c
+  203  fdisk -l
+  204  clear
+  205  pvs
+  206  fdisk /dev/sdc
+  207  fdisk -p /dev/sdc
+  208  fdisk -l /dev/sdc
+  209  fdisk /dev/sdc
+  210  clear
+  211  fdisk -l /dev/sdc
+  212  mkswap /dev/sdc
+  213  mkswap /dev/sdc3
+  214  swapon /dev/sdc3
+  215  fdisk -l /dev/sdc
+  216  blkid
+  217  clear
+  218* 
+  219  fdisk -l /dev/sdc
+  220  lsblk
+  221  clear
+  222  vmstat
+  223  cat /proc/partitions
+  224  cat /proc/swap
+  225  cat /proc/swaps
+  226* 
+  227* 
+  228  mkfs.ext3 /dev/sdc1
+  229  mkfs.ext3 /dev/sdc2
+  230  mkdir /p1 /p2
+  231  mount /dev/sdc1 /p1
+  232  mount /dev/sdc2 /p2
+  233  df -f
+  234  df -h
+  235  lsblk
+  236  swapoff /dev/sdc3
+  237  cat /proc/swaps
+  238  umount /p1
+  239  umount /p2
+  240  fdisk /dev/sdc
+  241  lsblk
+  242  history
+  243  git
+  244  yum install git
+  245  git clone https:/github.com/surajshetty57/webserver
+  246  ls
+  247  ls -a
+  248  more .bash_history
+  249  git clone https://github.com/surajshetty57/webserver
+  250  cp ~/.bash_history suraj.txt
+  251  cat suraj.txt
+  252  git status
+  253  git clone https://github.com/surajshetty57/suraj
+  254  ls
+  255  cd suraj
+  256  ls
+  257  cp ~/suraj.txt .
+  258  cat suraj.txt
+  259  git status
+  260  git add
+  261  git add .
+  262  git commit -m "changed"
+  263  git push
+  264  cd
+  265  history
+  266  vi ~/bash_history
+  267  vi ~/.bash_history
+  268  ls
+  269  cat .bash_history
+  270  vi .bash_history
+  271  history > myfile.txt
