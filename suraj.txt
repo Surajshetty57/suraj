@@ -1,1 +1,133 @@
+lsblk
+init 0
+lsblk
+cat /proc/partitions
+c
+alias c=clear
+c
+pvs
+pvcreate /dev/sdb /dev/sdc
+pvs
+vgcreate /dev/myvg /dev/sdb /dev/sdc
+vgs
+man lvcreate
+c
+lvcreate -L 250 -n mylvol1 /dev/myvg
+lvcreate -l 1G -n mylvol2 /dev/myvg
+lvcreate -l +1GB -n mylvol2 /dev/myvg
+lvcreate -l 1GB -n mylvol2 /dev/myvg
+lvcreate -l 1gb -n mylvol2 /dev/myvg
+man lvcreate
+c
+lvcreate -l 250 -n mylvol2 /dev/myvg
+lvs
+df -h
+man df
+c
+man mkfs
+c
+mkfs.ext4 /dev/myvg/lvol1
+lvs
+mkfs.ext4 /dev/myvg/mylvol1
+mkfs.ext4 /dev/myvg/mylvol2
+mkdir class1 class2
+rmdir class1 class2
+pwd
+cd /
+mkdir class1 class2
+mount /dev/myvg/mylvol1 /class1
+mount /dev/myvg/mylvol2 /class2
+df -h
+init 6
+mount 
+c
+alias c=clear
+c
+df -h
+vi /etc/fstab 
+c
+vi .bashrc
+c
+reboot
+c
+d
+c
+mount
+df -h
+mount /dev/myvg/mulvol2 /class2
+mount /dev/myvg/mylvol2 /class2
+df -h
+mount
+df -h
+c
+df -h
+mount
+c
+d
+more .basharc
+more .bashrc
+whoami
+pwd
+ls -a
+useradd u1
+passwd -d u1
+su - u1
+vi /etc/bashrc
+useradd u2
+passwd -d u2
+su - u2
+su - u1
+pwd
+cd /
+vi /etc/fstab 
+c
+reboot
+df -h
+vi /etc/fstab 
+init 6
+df -h
+mount
+c
+mount /dev/myvg/mylvol2 /class2
+df -h
+cd /class2
+touch abc
+touch 1 2 3
+ls
+init 6
+cd /
+pwd
+ls
+cd class2
+ls
+df -h
+mount /dev/myvg/mylvol2 /class2
+df -h
+ls -l
+cd class1
+cd class 1
+cd ..
+cd /class1
+ls
+mount 
+c
+cd /class2
+ls -a
+c
+df -h
+cdd ..
+cd ..
+vi /etc/fstab 
+c
+init 6
+df -h
+mount
+c
+vgs
+lvs
+mke2
 
+c
+xc
+history
+init 6
